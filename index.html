@@ -1,174 +1,27 @@
+<!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="to-do list" content="" />
-    <meta name="Gatling" content="" />
-    <title>To-Do List</title>
-  <link rel="manifest" href="manifest.json">
-  <link rel="icon" type="image/png" href="images/icon-192.png" />
-<style>
-  *{
-    margin: 0;
-    padding: 0;
-  }
-  html{
-    font-family: Comic Sans MS;
-    background-color: lightgrey;
-  }
-  h1{
-    text-decoration: wavy;
-    text-indent: 20px;
-    
-  }
-  #todo-list {
-    background-color: #585e66;
-    border: 1px solid lightgray;
-    margin: 16px;
-    padding: 16px;
-    border-radius: 5px;
-  }
-  .todo-item {
-    margin-top: 8px;
-    
-    height: 40px;
-  }
-  .completed {
-    
-    background-color: #238636;
-    border-radius: 5px;
-    padding: 5px;
-  }
-  .add-button {
-    background-color: #238636;
-    border-radius: 4px;
-    height: 30px;
-    width: 50px;
-    border: 1px;
-    font-weight: 700;
-  }
-  .remove-button {
-    color: #db1616;
-    font-weight: 700;
-    background-color: #21262D;
-    border-radius: 4px;
-    height: 30px;
-    width: 60px;
-    border: 1px;
-  }
-  .remove-button:hover{
-    background-color: #db1616;
-    color:#21262D ;
-    border: 10px #21262D;
-  }
-  .box{
-    margin-top: 3px;
-    height: 20px;
-    width: 30px;
-  }
-  .item{
-    height: 30px;
-    width: 80%;
-    outline: none;
-    border: none;
-    border-radius: 3px;
-    text-indent: 5px;
-  }
-  @media only screen and (max-width: 600px) {
-  .todo-item {
-    margin-top: 8px;
-    height: 75px;
-    padding: 5px;
-    margin-bottom: 5px;
-  }
-  .remove-button {
-    margin-top: 5px;
-    right: 90%;
-  }
-}
-  .rights{
-    text-align: center;
-    bottom: 1;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
+  <head>
+    <title>To-Do List by Gatling</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@1,300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <h1>To-Do List</h1>
+    <form id="todo-form">
+      <input type="text" id="todo-input" placeholder="Add item..." />
+      <button type="submit">Add</button>
+    </form>
+    <ul id="todo-list"></ul>
 
-</style>
-  
-</head>
-<body>
-  <div>
-    <h1>TO-DO List</h1>
-  </div>
-  <div id="todo-list">
-    
-  <button class="add-button">Add</button>
-    <div class="todo-item">
-      <input class="box" type="checkbox">
-      <input class="item" maxlength="150" type="text">
-      <button class="remove-button">Delete</button>
-  </div>
-</div>
-<p class="rights">&copy; GATLING. 2022</p>
-</div>
-</body>
-<script>
-  // Get a reference to the to-do list
-  const todoList = document.getElementById('todo-list');
-  const addButton = document.querySelector('.add-button');
-
-
-  // Load the to-do list items from localStorage
-  const storedTodos = localStorage.getItem('todos');
-  if (storedTodos) {
-    todoList.innerHTML = storedTodos;
-  }
-
-  // Add an event listener for the "change" event on the checkbox
-  todoList.addEventListener('change', (event) => {
-    if (event.target.type === 'checkbox') {
-      // Add or remove the "completed" class on the to-do item
-      event.target.parentNode.classList.toggle('completed');
-
-      // Save the updated to-do list to localStorage
-      localStorage.setItem('todos', todoList.innerHTML);
-    }
-  });
-
-  // Add an event listener for the "click" event on the add/remove buttons
-  todoList.addEventListener('click', (event) => {
-    
-    if (event.target.className === 'add-button') {
-      // Create a new to-do item
-      const todoItem = document.createElement('div');
-      todoItem.className = 'todo-item';
-      todoItem.innerHTML = '<input class="box" type="checkbox"> <input class="item" maxlength="150" type="text"> <button class="remove-button">Delete</button>';
-
-      // Add the new to-do item to the list
-      todoList.appendChild(todoItem);
-
-      // Save the updated to-do list to localStorage
-      localStorage.setItem('todos', todoList.innerHTML);
-    } else if (event.target.className === 'remove-button') {
-      // Remove the clicked to-do item
-      event.target.parentNode.remove();
-
-      // Save the updated to-do list to localStorage
-      localStorage.setItem('todos', todoList.innerHTML);
-    }
-  });
-</script>
-<!-- FOR THE PWA-->
-<script>
-  if ('serviceWorker' in navigator) {
-    window.addEventListener('load', function() {
-      navigator.serviceWorker.register('/sw.js').then(function(registration) {
-        console.log('Service worker registered:', registration);
-      }).catch(function(error) {
-        console.log('Service worker registration failed:', error);
-      });
-    });
-  }
-</script>
-
+    <script src="script.js"></script>
+  </body>
 </html>

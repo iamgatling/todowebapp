@@ -1,0 +1,86 @@
+body {
+	font-family: 'Jost', sans-serif;
+}
+
+h1 {
+	text-align: center;
+}
+
+#todo-form {
+    font-family: 'Jost', sans-serif;
+	display: flex;
+	margin-bottom: 20px;
+}
+
+#todo-input {
+    font-family: 'Jost', sans-serif;
+	flex-grow: 1;
+	padding: 10px;
+	font-size: 16px;
+	border: none;
+	border-bottom: 2px solid #ddd;
+}
+
+#todo-input:focus {
+    
+	outline: none;
+}
+
+button[type="submit"] {
+    font-family: 'Jost', sans-serif;
+	padding: 10px 20px;
+	background-color: #008CBA;
+	color: white;
+	border: none;
+	cursor: pointer;
+}
+
+button[type="submit"]:hover {
+	background-color: #005f7f;
+}
+
+#todo-list {
+    font-family: 'Jost', sans-serif;
+	list-style: none;
+	padding: 0;
+}
+
+#todo-list li {
+    font-family: 'Jost', sans-serif;
+	display: flex;
+	align-items: center;
+	margin-bottom: 10px;
+}
+
+#todo-list li input[type="checkbox"] {
+	margin-right: 10px;
+}
+
+#todo-list li button {
+    font-family: 'Jost', sans-serif;
+	margin-left: auto;
+	background-color: #f44336;
+	color: white;
+	border: none;
+	cursor: pointer;
+	padding: 5px 10px;
+}
+
+#todo-list li button:hover {
+	background-color: #d32f2f;
+}
+.hidden {
+    
+	display: none;
+}
+.edit-input {
+    border: 1px solid;
+    margin-left: 20px;
+	outline: none;
+    font-family: 'Jost', sans-serif;
+}
+.completed{
+    font-family: 'Jost', sans-serif;
+    font: italic;
+    background-color: aquamarine;
+}
