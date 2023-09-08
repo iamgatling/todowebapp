@@ -74,11 +74,14 @@ button[type="submit"]:hover {
 	display: none;
 }
 .edit-input {
-    border: 1px solid;
+    border: none; 
+    border-bottom: 1px solid rgb(136, 136, 136);
+    border-radius: 0; 
+    outline: none; 
     margin-left: 20px;
-	outline: none;
     font-family: 'Jost', sans-serif;
 }
+
 .completed{
     font-family: 'Jost', sans-serif;
     font: italic;
