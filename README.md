@@ -13,10 +13,10 @@ Welcome to the To-Do List Web Application repository! This simple web app allows
 ### Edit Box Styling
 
 - The edit box for to-do items has been enhanced for a more polished user experience:
-- Sharp corners (border-radius: 0).
-- No outline when clicked (outline: none).
-- A 2px black bottom border (border-bottom: 2px solid black).
-- No border on the top, right, and left.
+  - Sharp corners (border-radius: 0).
+  - No outline when clicked (outline: none).
+  - A 2px black bottom border (border-bottom: 2px solid black).
+  - No border on the top, right, and left.
 
 ## Files
 
@@ -42,7 +42,11 @@ To get started with the To-Do List Web Application, simply clone this repository
 
 ## Website
 
-You can access the To-Do List Web Application online at [todowebapp](https://davidgatling.github.io/todowebapp/).
+You can access the To-Do List Web Application online at [https://davidgatling.github.io/todowebapp/](https://davidgatling.github.io/todowebapp/).
+
+## Releases
+
+For a list of releases and updates, please visit the [Releases](https://github.com/YourUsername/YourRepository/releases) section.
 
 ## Contributing
 
