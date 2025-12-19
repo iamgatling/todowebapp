@@ -58,4 +58,4 @@ This project is licensed under the MIT License - see the [LICENSE](https://githu
 
 ---
 
-Enjoy using the To-Do List Web Application! We hope it helps you stay organized and productive.
+Enjoy using the To-Do List Web Application! I hope it helps you stay organized and productive.
